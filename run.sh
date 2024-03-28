@@ -1,5 +1,5 @@
 # python generate_statistics_summary_vod.py -i /media/yanconglin/4408c7fc-2531-4bdd-9dfd-421b2cc2246e/Dataset/VOD/view_of_delft_PUBLIC -o ./vod
-# python plot_histogram.py -i  ./vod/distance_velocity_vod.npz -o ./vod
+python plot_histogram.py -i  ./vod/distance_velocity_vod.npz -o ./vod
 python plot_statistics.py -i  ./vod -o ./vod
 
 

@@ -1,0 +1,206 @@
+{
+  "name": "av2",
+  "box_results": {
+    "LargeVehicle": {
+      "0.0m to 50.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 72361916,
+        "total_area": 757591.0264079869,
+        "total_no_boxes": 33249,
+        "density_radar": 0.0,
+        "density_lidar": 95.51580401248154,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 2176.36368011068
+      },
+      "100.0m to 150.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 298039,
+        "total_area": 353587.5643899441,
+        "total_no_boxes": 14595,
+        "density_radar": 0.0,
+        "density_lidar": 0.8429001187137795,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 20.420623501199042
+      },
+      "150.0m to 200.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 83770,
+        "total_area": 234745.54767751694,
+        "total_no_boxes": 9031,
+        "density_radar": 0.0,
+        "density_lidar": 0.3568544785142401,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 9.275827704573137
+      },
+      "50.0m to 100.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 1853249,
+        "total_area": 619353.6984510124,
+        "total_no_boxes": 26127,
+        "density_radar": 0.0,
+        "density_lidar": 2.992230456740515,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 70.93233053928886
+      }
+    },
+    "PassengerCar": {
+      "0.0m to 50.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 132851106,
+        "total_area": 3252864.6771678925,
+        "total_no_boxes": 378347,
+        "density_radar": 0.0,
+        "density_lidar": 40.84126429620394,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 351.13561360338525
+      },
+      "100.0m to 150.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 586488,
+        "total_area": 1045996.7047019005,
+        "total_no_boxes": 115352,
+        "density_radar": 0.0,
+        "density_lidar": 0.5606977511149461,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 5.0843331715098135
+      },
+      "150.0m to 200.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 89484,
+        "total_area": 310378.9873857498,
+        "total_no_boxes": 32959,
+        "density_radar": 0.0,
+        "density_lidar": 0.28830559940188916,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 2.7150095573288024
+      },
+      "50.0m to 100.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 4777293,
+        "total_area": 2360628.319922924,
+        "total_no_boxes": 270286,
+        "density_radar": 0.0,
+        "density_lidar": 2.0237379004908242,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 17.674955417594695
+      }
+    },
+    "RidableVehicle": {
+      "0.0m to 50.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 1866944,
+        "total_area": 34212.7003210783,
+        "total_no_boxes": 36232,
+        "density_radar": 0.0,
+        "density_lidar": 54.568741504738334,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 51.52748951203356
+      },
+      "100.0m to 150.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 12260,
+        "total_area": 5101.74310708046,
+        "total_no_boxes": 4307,
+        "density_radar": 0.0,
+        "density_lidar": 2.4031002233305214,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 2.8465289064313906
+      },
+      "150.0m to 200.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 925,
+        "total_area": 685.2701886296272,
+        "total_no_boxes": 494,
+        "density_radar": 0.0,
+        "density_lidar": 1.349832541015353,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 1.8724696356275303
+      },
+      "50.0m to 100.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 101033,
+        "total_area": 14519.842800527811,
+        "total_no_boxes": 13590,
+        "density_radar": 0.0,
+        "density_lidar": 6.958270925379946,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 7.434363502575423
+      }
+    },
+    "VulnerableRoadUser": {
+      "0.0m to 50.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 10623233,
+        "total_area": 75848.53465747833,
+        "total_no_boxes": 156501,
+        "density_radar": 0.0,
+        "density_lidar": 140.05851329855054,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 67.87964933131418
+      },
+      "100.0m to 150.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 77218,
+        "total_area": 19392.80695554614,
+        "total_no_boxes": 23913,
+        "density_radar": 0.0,
+        "density_lidar": 3.9817856268566865,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 3.2291222347676998
+      },
+      "150.0m to 200.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 7394,
+        "total_area": 4121.542692005634,
+        "total_no_boxes": 4141,
+        "density_radar": 0.0,
+        "density_lidar": 1.7939884534841286,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 1.785559043709249
+      },
+      "50.0m to 100.0m": {
+        "total_points_radar": 0,
+        "total_points_lidar": 548520,
+        "total_area": 44661.24051889777,
+        "total_no_boxes": 75146,
+        "density_radar": 0.0,
+        "density_lidar": 12.281790510675616,
+        "density_per_box_radar": 0.0,
+        "density_per_box_lidar": 7.299390519788146
+      }
+    }
+  },
+  "frame_results": {
+    "50.0m to 100.0m": {
+      "total_points_radar": 0,
+      "total_points_lidar": 651258923,
+      "average_radar_points_per_frame": 0.0,
+      "average_lidar_points_per_frame": 27657.82999957532
+    },
+    "0.0m to 50.0m": {
+      "total_points_radar": 0,
+      "total_points_lidar": 1181297546,
+      "average_radar_points_per_frame": 0.0,
+      "average_lidar_points_per_frame": 50167.645390070924
+    },
+    "150.0m to 200.0m": {
+      "total_points_radar": 0,
+      "total_points_lidar": 119328331,
+      "average_radar_points_per_frame": 0.0,
+      "average_lidar_points_per_frame": 5067.665987174587
+    },
+    "100.0m to 150.0m": {
+      "total_points_radar": 0,
+      "total_points_lidar": 301377799,
+      "average_radar_points_per_frame": 0.0,
+      "average_lidar_points_per_frame": 12798.989213063236
+    },
+    "null": {
+      "total_points_radar": 0,
+      "total_points_lidar": 23936489,
+      "average_radar_points_per_frame": 0.0,
+      "average_lidar_points_per_frame": 1016.5409181636727
+    }
+  },
+  "total_no_frames": 23547
+}

@@ -75,6 +75,8 @@ if __name__ =='__main__':
     )
 
     args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=True)
+
     # ####################################################################################################################################
     distances = np.arange(0, 200+1e-8, 50)
     velocities = np.arange(0, 50+1e-8, 0.2)
@@ -97,6 +99,7 @@ if __name__ =='__main__':
     ax.set_ylabel('num of annotations')
     ax.set_title(f'histogram: distance')
     plt.suptitle('plot statistics')
+    plt.savefig(f'{args.output}/hist_distance.png', dpi=300)
     plt.show()
     plt.close()
 
@@ -107,6 +110,7 @@ if __name__ =='__main__':
     ax.set_ylabel('num of annotations')
     ax.set_title(f'histogram: velocity')
     plt.suptitle('plot statistics')
+    plt.savefig(f'{args.output}/hist_velocity.png', dpi=300)
     plt.show()
     plt.close()
 
