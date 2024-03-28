@@ -454,7 +454,9 @@ if __name__ =='__main__':
     structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] = 0
     # print('len(dataloader): ', len(data_loader))
     for i, batch in enumerate(tqdm(data_loader)):
+        assert len(batch)==1
         img, lidar, radar, labels, dists, velos, nums_lidar, nums_radar, areas = batch[0]
+        structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] += len(batch)
         # print('var size: ', img.shape, lidar.shape, radar.shape, labels.shape, dists.shape, velos.shape, nums_lidar.shape, areas.shape)
         if img is None: continue
         for label, dist, velo, num_lidar, num_radar, area in zip(labels, dists, velos, nums_lidar, nums_radar, areas):
@@ -462,7 +464,6 @@ if __name__ =='__main__':
             # print(f'summary per class: {i}, {bosch_cls[int(class_name)]}')
             label, dist, velo, num_lidar, num_radar, area = int(label), float(dist), float(velo), int(num_lidar), int(num_radar), float(area)
             class_name = bosch_cls[label]
-            structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] += 1
 
             distance_bin_str = get_distance_str(dist, distance_bins)
             if distance_bin_str is None:

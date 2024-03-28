@@ -98,13 +98,15 @@ def draw_point_cloud_density_plots(dataset_summaries: dict, output_dir, modality
             else:
                 show_legend = False
 
-            x = list(class_summary.keys())
             if modality == "Radar":
                 y_per_area = [value[SummaryKeys.DENSITY_RADAR.full_name] for value in class_summary.values()]
                 y_per_box = [value[SummaryKeys.DENSITY_PER_BOX_RADAR.full_name] for value in class_summary.values()]
             else:
                 y_per_area = [value[SummaryKeys.DENSITY_LIDAR.full_name] for value in class_summary.values()]
                 y_per_box = [value[SummaryKeys.DENSITY_PER_BOX_LIDAR.full_name] for value in class_summary.values()]
+
+            x, y_per_area = sort_list_for_display(list(class_summary.keys()), y_per_area)
+            x, y_per_box = sort_list_for_display(list(class_summary.keys()), y_per_box)
 
             figure_per_area.add_trace(
                 go.Bar(
@@ -163,7 +165,6 @@ def draw_point_points_per_frame_plots(dataset_summaries: dict, output_dir, modal
             continue
 
         color = dataset_colors[dataset_idx % len(dataset_colors)]
-        x = list(dataset_summary["frame_results"].keys())
         if modality == "Radar":
             y = [
                 distance_data[SummaryKeys.AVERAGE_POINTS_PER_FRAME_RADAR.full_name]
@@ -174,7 +175,9 @@ def draw_point_points_per_frame_plots(dataset_summaries: dict, output_dir, modal
                 distance_data[SummaryKeys.AVERAGE_POINTS_PER_FRAME_LIDAR.full_name]
                 for distance_data in dataset_summary["frame_results"].values()
             ]
-        print('x, y: ', len(x), len(y))
+        x = list(dataset_summary["frame_results"].keys())
+        x = [x_ for x_ in x if x_ !='null'] # argoverse-v2: some classes are not in the official class list!
+        x, y = sort_list_for_display(x, y)
         figure.add_trace(go.Bar(name=f"{dataset_name}", x=x, y=y, marker={"color": color}))
 
     figure.update_layout(
@@ -216,6 +219,11 @@ def plot_dataset_statistics_main(input_dir: Path, output_dir: Path):
     draw_point_cloud_density_plots(dataset_summaries, output_dir=output_dir, modality="Radar")
     draw_point_cloud_density_plots(dataset_summaries, output_dir=output_dir, modality="Lidar")
 
+def sort_list_for_display(x, y):
+    idx = sorted(range(len(x)), key=lambda k: float(x[k][0:3]))
+    sorted_x = [x[i] for i in idx]
+    sorted_y = [y[i] for i in idx]
+    return sorted_x, sorted_y 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run the dataset statistics.")

@@ -384,7 +384,9 @@ if __name__ =='__main__':
     structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] = 0
 
     for i, batch in enumerate(tqdm(data_loader)):
+        assert len(batch)==1
         lidar, labels, dists, velos, nums_lidar, areas = batch[0]
+        structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] += len(batch)
         # print('var size: ', img.shape, lidar.shape, radar.shape, labels.shape, dists.shape, velos.shape, nums_lidar.shape, areas.shape)
         # per box
         for label, dist, velo, num_lidar, area in zip(labels, dists, velos, nums_lidar, areas):
@@ -392,7 +394,6 @@ if __name__ =='__main__':
             if int(label)<0: continue
             label, dist, velo, num_lidar, area = int(label), float(dist), float(velo), int(num_lidar), float(area)
             class_name = bosch_cls[label]
-            structured_summary[SummaryKeys.TOTAL_NO_FRAMES.full_name] += 1
 
             distance_bin_str = get_distance_str(dist, distance_bins)
             if distance_bin_str is None:
@@ -427,7 +428,7 @@ if __name__ =='__main__':
     structured_summary = perform_final_calculations(structured_summary)
     structured_summary = sort_summary(structured_summary)
 
-    # save summary_vod to json
+    # save summary to json
     with open(args.output.joinpath("summary_av2.json"), "w", encoding="utf-8") as handle:
         json.dump(structured_summary, handle, indent=2)
 
