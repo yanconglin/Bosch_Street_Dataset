@@ -326,7 +326,7 @@ if __name__ =='__main__':
 
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    dataset = AV2_dataset(root_dir=args.dataset_path, split_name='val', timestep=1)
+    dataset = AV2_dataset(root_dir=args.dataset_path, split_name='train', timestep=1)
 
     kwargs = {
         "shuffle": False,
