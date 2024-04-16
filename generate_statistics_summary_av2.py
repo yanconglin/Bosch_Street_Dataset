@@ -342,7 +342,7 @@ if __name__ =='__main__':
 
     ####################################################################################################################################
     ### HISTOGRAM
-    distances = np.arange(0, 200+1e-8, 50)
+    distances = np.arange(0, 200+1e-8, 1.0)
     velocities = np.arange(0, 50+1e-8, 0.2)
 
     hist_dist = np.zeros((len(distances)-1, 2))
