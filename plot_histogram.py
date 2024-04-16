@@ -78,7 +78,7 @@ if __name__ =='__main__':
     args.output.mkdir(parents=True, exist_ok=True)
 
     # ####################################################################################################################################
-    distances = np.arange(0, 200+1e-8, 50)
+    distances = np.arange(0, 200+1e-8, 1.0)
     velocities = np.arange(0, 50+1e-8, 0.2)
     npz = np.load(args.dataset_path, allow_pickle=True)
     hist_dist = npz['hist_dist']
